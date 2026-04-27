@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Cardmarket Wants Exporter",
+  "version": "1.0",
+  "description": "Scrapes Cardmarket Wants lists and exports card names to a CSV file.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.cardmarket.com/*/Wants/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
